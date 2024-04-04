@@ -15,7 +15,7 @@ done < ventas.csv
 # Generar reporte
 > reporte_ventas.txt
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-echo "Total venta mensual" >> reporte_ventas.txt
+echo "Total venta mensual" >> workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 for ((i=0; i<${#venta_mensual[@]}; i++)) do
     echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> workspaces/TareaBloque_3/reporte_ventas.txt        
