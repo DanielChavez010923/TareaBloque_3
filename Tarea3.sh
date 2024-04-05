@@ -10,13 +10,13 @@ if [[ $v =~ ^[0-9]+$ ]]; then
     mes+=("$mes")
     venta_mensual+=("$v")
 fi
-done < ventas.csv
+done < workspaces/TareaBloque_3/ventas.csv
 
 # Generar reporte
-> reporte_ventas.txt
-echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+> workspaces/TareaBloque_3/reporte_ventas.txt
+echo "-------------------------------------------------" >> workspaces/TareaBloque_3/reporte_ventas.txt
 echo "Total venta mensual" >> workspaces/TareaBloque_3/reporte_ventas.txt
-echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "-------------------------------------------------" >> workspaces/TareaBloque_3/reporte_ventas.txt
 for ((i=0; i<${#venta_mensual[@]}; i++)) do
     echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> workspaces/TareaBloque_3/reporte_ventas.txt        
 done
