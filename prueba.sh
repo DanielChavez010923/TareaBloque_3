@@ -12,6 +12,8 @@ totalcentro=0
 totallarabida=0
 totallamascota=0
 ventastotales=0
+mayor=0
+mes_mayor=""
 
 while IFS=";" read -r mes monto descripcion sucursal
 do

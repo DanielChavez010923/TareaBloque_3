@@ -11,9 +11,7 @@ if [[ $v =~ ^[0-9]+$ ]]; then
     venta_mensual+=("$v")
 fi
 
-#Mes que mas se ha vendido
-
-if [[ $v > $mayor ]]; then
+ventastotales=$(echo $ventastotales $venta_mensual | awk '{printf "%.2f", $1 + $2}')
 
 
 done < ventas.csv
@@ -30,7 +28,9 @@ echo "-------------------------------------------------" >> /workspaces/TareaBlo
 #for ((i=0; i<${#venta_mensual[@]}; i++)) do
 #    echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> /workspaces/TareaBloque_3/reporte_ventas.txt        
 #done
-#echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+
+echo -e "Las ventas anuales son: $"$ventastotales >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 producto_mas_vendido=$(cut -d';' -f3 ventas.csv | sort | uniq -c | sort -nr | head -n1) 

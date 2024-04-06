@@ -1,6 +1,6 @@
-El monto vendido en el mes de enero es: $ 100134.85
+El monto vendido en el mes de enero es: $ 181.85
 El mes que mas vendio fue: Enero
-Las ventas totales son : $ 7071706.33
+Las ventas totales son : $ 6971753.33
 el total de teclados vendidos es: 12
 el total de memorias ram vendidas es: 12
 el total de tarjetas graficas vendidas es: 12
