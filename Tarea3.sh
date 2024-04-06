@@ -85,11 +85,13 @@ echo -e "El producto más vendido es:\n-----------------------------------------
 echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-echo "Monto anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-
-
-echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 cliente_mas_frecuente=$(cut -d';' -f4 ventas.csv | sort | uniq -c | sort -nr | head -n1) 
 echo -e "El cliente más frecuente es:\n-----------------------------------------------\n $(echo $cliente_mas_frecuente | awk '{$1=""; print $0}' | sed 's/^ //')" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+
+echo "Numero de ventas de la sucursal Escalon:  $(awk -F";" '{print $4}' ventas.csv | grep -o "Escalon" | wc -l)">> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "Numero de ventas de la sucursal Venezuela: $(awk -F";" '{print $4}' ventas.csv | grep -o "Venezuela" | wc -l)" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "Numero de ventas de la sucursal Luceiro: $(awk -F";" '{print $4}' ventas.csv | grep -o "Luceiro" | wc -l )">> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "Numero de ventas de la sucursal Centro: $(awk -F";" '{print $4}' ventas.csv | grep -o "Centro" | wc -l )">> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "Numero de ventas de la sucursal La rabida: $(awk -F";" '{print $4}' ventas.csv | grep -o "La rabida" | wc -l )">> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo "Numero de ventas de la sucursal La mascota: $(awk -F";" '{print $4}' ventas.csv | grep -o "La mascota" | wc -l)" >> /workspaces/TareaBloque_3/reporte_ventas.txt
