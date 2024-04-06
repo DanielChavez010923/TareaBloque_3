@@ -13,21 +13,68 @@ fi
 
 ventastotales=$(echo $ventastotales $venta_mensual | awk '{printf "%.2f", $1 + $2}')
 
+if [ $mes == "Enero" ]; then
+    monto_enero=$(echo $monto_enero $v | awk '{printf "%.2f", $1 + $2}')
+fi
+
+if [ $mes == "Febrero" ]; then
+    monto_febrero=$(echo $monto_febrero $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Marzo" ]; then
+    monto_marzo=$(echo $monto_marzo $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Abril" ]; then
+    monto_abril=$(echo $monto_abril $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Mayo" ]; then
+    monto_mayo=$(echo $monto_mayo $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Junio" ]; then
+    monto_junio=$(echo $monto_junio $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Julio" ]; then    
+    monto_julio=$(echo $monto_julio $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Agosto" ]; then
+    monto_agosto=$(echo $monto_agosto $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Septiembre" ]; then
+    monto_septiembre=$(echo $monto_septiembre $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Octubre" ]; then
+    monto_octubre=$(echo $monto_octubre $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Noviembre" ]; then
+    monto_noviembre=$(echo $monto_noviembre $v | awk '{printf "%.2f", $1 + $2}')
+fi
+if [ $mes == "Diciembre" ]; then
+    monto_diciembre=$(echo $monto_diciembre $v | awk '{printf "%.2f", $1 + $2}')
+fi
+
+
+
+
 
 done < ventas.csv
 
 # Generar reporte
-> reporte_ventas.txt
+> reporte_ventas.txt    
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "Total venta mensual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
-
-
-
-#for ((i=0; i<${#venta_mensual[@]}; i++)) do
-#    echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> /workspaces/TareaBloque_3/reporte_ventas.txt        
-#done
+echo -e "Enero: $" $monto_enero >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Febrero: $" $monto_febrero >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Marzo: $" $monto_marzo >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Abril: $" $monto_abril >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Mayo: $" $monto_mayo >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Junio: $" $monto_junio >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Julio: $" $monto_julio >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Agosto: $" $monto_agosto >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Septiembre: $" $monto_septiembre >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Octubre: $" $monto_octubre >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Noviembre: $" $monto_noviembre >> /workspaces/TareaBloque_3/reporte_ventas.txt
+echo -e "Diciembre: $" $monto_diciembre >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
 echo -e "Las ventas anuales son: $"$ventastotales >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
@@ -40,11 +87,7 @@ echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "Monto anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-#for i in "${!venta_mensual[@]}"; do
-#    monto_anual=$((monto_anual + ${venta_mensual[$i]}))
-#done
-#echo " $""$monto_anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-#echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+
 
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 cliente_mas_frecuente=$(cut -d';' -f4 ventas.csv | sort | uniq -c | sort -nr | head -n1) 
