@@ -1,5 +1,5 @@
 #!/bin/bash
-
+monto_anual=0
 # Leer el archivo CSV
 while IFS=';' read -r mes venta_mensual producto cliente
 do
@@ -10,17 +10,27 @@ if [[ $v =~ ^[0-9]+$ ]]; then
     mes+=("$mes")
     venta_mensual+=("$v")
 fi
-done < workspaces/TareaBloque_3/ventas.csv
+
+#Mes que mas se ha vendido
+
+if [[ $v > $mayor ]]; then
+
+
+done < ventas.csv
 
 # Generar reporte
-> workspaces/TareaBloque_3/reporte_ventas.txt
+> reporte_ventas.txt
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "Total venta mensual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-------------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-for ((i=0; i<${#venta_mensual[@]}; i++)) do
-    echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> /workspaces/TareaBloque_3/reporte_ventas.txt        
-done
-echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+
+
+
+
+#for ((i=0; i<${#venta_mensual[@]}; i++)) do
+#    echo " ${mes[$i]}" "$" "${venta_mensual[$i]}" >> /workspaces/TareaBloque_3/reporte_ventas.txt        
+#done
+#echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 producto_mas_vendido=$(cut -d';' -f3 ventas.csv | sort | uniq -c | sort -nr | head -n1) 
@@ -30,11 +40,11 @@ echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "Monto anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-for i in "${!venta_mensual[@]}"; do
-    monto_anual=$((monto_anual + ${venta_mensual[$i]}))
-done
-echo " $""$monto_anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
-echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+#for i in "${!venta_mensual[@]}"; do
+#    monto_anual=$((monto_anual + ${venta_mensual[$i]}))
+#done
+#echo " $""$monto_anual" >> /workspaces/TareaBloque_3/reporte_ventas.txt
+#echo "" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 
 echo "-----------------------------------------------" >> /workspaces/TareaBloque_3/reporte_ventas.txt
 cliente_mas_frecuente=$(cut -d';' -f4 ventas.csv | sort | uniq -c | sort -nr | head -n1) 

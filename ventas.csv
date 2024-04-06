@@ -1,5 +1,5 @@
 Mes;Monto;Descripcion;Sucursal
-Enero;15253;Teclados;La mascota
+Enero;3;Teclados;La mascota
 Febrero;112.21;Teclados;La rabida
 Marzo;125345;Teclados;La mascota
 Abril;30169;Teclados;Escalon
@@ -11,7 +11,7 @@ Septiembre;105873.32;Teclados;Centro
 Octubre;121014.11;Teclados;Centro
 Noviembre;136154.9;Teclados;Luceiro
 Diciembre;151295.69;Teclados;La mascota
-Enero;14253;Memoria Ram;Escalon
+Enero;2;Memoria Ram;Escalon
 Febrero;887.78;Memoria Ram;La rabida
 Marzo;124345;Memoria Ram;Venezuela
 Abril;29169;Memoria Ram;Escalon
@@ -23,7 +23,7 @@ Septiembre;104873.32;Memoria Ram;Luceiro
 Octubre;120014.11;Memoria Ram;La rabida
 Noviembre;135154.9;Memoria Ram;Escalon
 Diciembre;150295.69;Memoria Ram;Venezuela
-Enero;13253;Tarjetas Graficas;La rabida
+Enero;1;Tarjetas Graficas;La rabida
 Febrero;1387.78;Tarjetas Graficas;La mascota
 Marzo;124845;Tarjetas Graficas;Luceiro
 Abril;29669;Tarjetas Graficas;Luceiro
@@ -35,7 +35,7 @@ Septiembre;105373.32;Tarjetas Graficas;Luceiro
 Octubre;120514.11;Tarjetas Graficas;Luceiro
 Noviembre;135654.9;Tarjetas Graficas;Venezuela
 Diciembre;150795.69;Tarjetas Graficas;Venezuela
-Enero;5301.2;Monitores;Venezuela
+Enero;1.2;Monitores;Venezuela
 Febrero;555.112;Monitores;Escalon
 Marzo;49938;Monitores;La mascota
 Abril;11867.6;Monitores;Escalon
@@ -47,7 +47,7 @@ Septiembre;42149.328;Monitores;Venezuela
 Octubre;48205.644;Monitores;Centro
 Noviembre;54261.96;Monitores;Venezuela
 Diciembre;60318.276;Monitores;Centro
-Enero;17228.9;SSD;La rabida
+Enero;28.9;SSD;La rabida
 Febrero;1804.114;SSD;Venezuela
 Marzo;162298.5;SSD;Escalon
 Abril;38569.7;SSD;Venezuela
@@ -59,7 +59,7 @@ Septiembre;136985.316;SSD;Centro
 Octubre;156668.343;SSD;La rabida
 Noviembre;176351.37;SSD;La rabida
 Diciembre;196034.397;SSD;Escalon
-Enero;23192.75;Fuentes de poder;La mascota
+Enero;92.75;Fuentes de poder;La mascota
 Febrero;2428.615;Fuentes de poder;Centro
 Marzo;218478.75;Fuentes de poder;Luceiro
 Abril;51920.75;Fuentes de poder;Centro
@@ -71,7 +71,7 @@ Septiembre;184403.31;Fuentes de poder;La rabida
 Octubre;210899.6925;Fuentes de poder;Centro
 Noviembre;237396.075;Fuentes de poder;Venezuela
 Diciembre;263892.4575;Fuentes de poder;La rabida
-Enero;11653;Case;Escalon
+Enero;53;Case;Escalon
 Febrero;212.22;Case;Luceiro
 Marzo;123245;Case;La mascota
 Abril;28069;Case;Centro
