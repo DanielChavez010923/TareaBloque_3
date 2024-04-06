@@ -1,0 +1,14 @@
+El monto vendido en el mes de enero es: $ 100134.85
+El mes que mas vendio fue: Enero
+Las ventas totales son : $ 7071706.33
+el total de teclados vendidos es: 12
+el total de memorias ram vendidas es: 12
+el total de tarjetas graficas vendidas es: 12
+el total de monitores vendidos es: 12
+el total de SSD vendidos es: 12
+el total de ventas de la sucrsal Escalon es: 13
+el total de ventas de la sucursal Venezuela es: 16
+el total de ventas de la sucursal Luceiro es: 10
+el total de ventas de la sucursal Centro es: 21
+el total de ventas de la sucursal La rabida es: 15
+el total de ventas de la sucursal La mascota es: 9
